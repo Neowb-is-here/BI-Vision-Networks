@@ -1,0 +1,393 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const services = [
+  {
+    title: "CCTV installation",
+    description: "Careful camera positioning, clean cable routes, recording setup, and system turnover for a complete installation.",
+  },
+  {
+    title: "Maintenance",
+    description: "Routine checks that keep cameras, storage, connections, and remote viewing working as intended.",
+  },
+  {
+    title: "Repairs",
+    description: "Practical fault finding and repair for existing CCTV systems with unreliable cameras, recording, or connectivity.",
+  },
+  {
+    title: "Residential & commercial",
+    description: "Security coverage planned around the actual entrances, activity areas, and monitoring needs of your property.",
+  },
+];
+
+const projectScope = [
+  "8-channel full-color CCTV system",
+  "Full-color night surveillance",
+  "Camera installation and positioning",
+  "Structured cabling",
+  "DVR, storage, and monitoring setup",
+  "Remote mobile viewing",
+  "System testing and commissioning",
+  "Final inspection and turnover",
+];
+
+const processSteps = [
+  {
+    title: "Assess the property",
+    description: "We discuss the spaces you need to watch, existing equipment, viewing needs, and practical cable routes.",
+  },
+  {
+    title: "Plan the right setup",
+    description: "We recommend camera placement and a system sized for the property instead of forcing a one-size package.",
+  },
+  {
+    title: "Install, test, and connect",
+    description: "We complete the installation, configure recording and remote viewing, then test the system before turnover.",
+  },
+];
+
+const facebookUrl = "https://www.facebook.com/profile.php?id=61579289795204";
+---
+
+<BaseLayout
+  title="BI-Vision Networks | CCTV Installation in Negros Occidental"
+  description="Professional CCTV installation, maintenance, and repair for homes and businesses across Negros Occidental. Call BI-Vision Networks for a free assessment."
+>
+  <header class="site-header" aria-label="Primary navigation">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="BI-Vision Networks home">
+        <img src="/images/bi-vision-logo-placeholder.png" alt="" width="512" height="512" />
+        <span class="brand-copy">
+          <strong>BI-VISION</strong>
+          <span>NETWORKS</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main menu">
+        <a href="#services">Services</a>
+        <a href="#project">Recent work</a>
+        <a href="#process">How it works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-call" href="tel:+639621231176">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.3.55 3.6.55a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.26.2 2.47.55 3.6a1 1 0 0 1-.25 1Z" /></svg>
+        <span>0962 123 1176</span>
+      </a>
+
+      <details class="mobile-menu">
+        <summary aria-label="Open navigation"><span></span><span></span><span></span></summary>
+        <nav aria-label="Mobile menu">
+          <a href="#services">Services</a>
+          <a href="#project">Recent work</a>
+          <a href="#process">How it works</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:+639621231176">Call 0962 123 1176</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="service-area">CCTV SERVICES · NEGROS OCCIDENTAL</p>
+          <h1>Clear coverage.<br />Reliable connection.</h1>
+          <div class="route-line" aria-hidden="true"><span></span></div>
+          <p class="hero-lead">Professional CCTV solutions planned for the way your home or business actually needs to be monitored.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">
+              Get a free assessment
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="text-link" href="tel:+639621231176">Call or text 0962 123 1176</a>
+          </div>
+          <p class="tagline">See it. Secure it. Connect it.</p>
+        </div>
+
+        <div class="hero-media" aria-label="BI-Vision installation capabilities">
+          <figure class="media-panel media-camera">
+            <img
+              src="/images/project-camera-installation.webp"
+              alt="Outdoor CCTV camera installed by BI-Vision Networks"
+              width="720"
+              height="450"
+              loading="eager"
+              fetchpriority="high"
+            />
+            <figcaption><span>Camera positioning</span><i aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="media-panel media-cabling">
+            <img
+              src="/images/project-structured-cabling.webp"
+              alt="Organized video connections inside a BI-Vision CCTV control enclosure"
+              width="720"
+              height="405"
+              loading="eager"
+            />
+            <figcaption><span>Structured cabling</span><i aria-hidden="true"></i></figcaption>
+          </figure>
+          <figure class="media-panel media-viewing">
+            <img
+              src="/images/project-completed-installation.webp"
+              alt="CCTV monitoring display and protected equipment enclosure installed by BI-Vision Networks"
+              width="960"
+              height="600"
+              loading="eager"
+            />
+            <figcaption><span>Monitoring setup</span><i aria-hidden="true"></i></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="shell section-heading split-heading">
+        <h2>CCTV support from first plan to long-term use.</h2>
+        <p>One local team for installation, upkeep, repairs, and system improvements across residential and commercial properties.</p>
+      </div>
+      <div class="shell service-list">
+        {services.map((service, index) => (
+          <article class="service-row">
+            <span class="service-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+            <a href="#contact" aria-label={`Ask about ${service.title}`}>Ask about this service <span aria-hidden="true">→</span></a>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="project section" id="project">
+      <div class="shell project-grid">
+        <div class="project-story">
+          <p class="project-label">COMPLETED INSTALLATION</p>
+          <h2>8-channel full-color surveillance.</h2>
+          <p>A complete CCTV setup designed for clear monitoring in low-light conditions—not just cameras on a wall, but a properly configured security system.</p>
+          <a class="text-link text-link-light" href={facebookUrl} target="_blank" rel="noreferrer">See BI-Vision’s work on Facebook <span aria-hidden="true">↗</span></a>
+        </div>
+
+        <ol class="project-scope" aria-label="Completed project scope">
+          {projectScope.map((item, index) => (
+            <li><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>
+          ))}
+        </ol>
+
+        <figure class="project-photo">
+          <img
+            src="/images/project-completed-installation.webp"
+            alt="Completed 8-channel full-color CCTV installation by BI-Vision Networks"
+            width="960"
+            height="600"
+            loading="lazy"
+          />
+          <figcaption>Project completed · System tested · Client turnover</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="audiences section" aria-labelledby="property-heading">
+      <div class="shell audience-grid">
+        <div class="audience-intro">
+          <p class="section-label">BUILT AROUND YOUR PROPERTY</p>
+          <h2 id="property-heading">Coverage that fits the place—not a generic package.</h2>
+        </div>
+        <div class="audience-types">
+          <article>
+            <h3>Homes & residential properties</h3>
+            <p>Practical visibility for entrances, gates, outdoor areas, and the spaces that matter to your household.</p>
+          </article>
+          <article>
+            <h3>Businesses & establishments</h3>
+            <p>Planned camera coverage, reliable recording, and convenient viewing for shops, offices, and operating sites.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process section" id="process">
+      <div class="shell">
+        <div class="section-heading process-heading">
+          <h2>A straightforward path to a working system.</h2>
+          <p>Start with a conversation. We’ll help turn your security needs into a clear installation plan.</p>
+        </div>
+        <ol class="process-list">
+          {processSteps.map((step, index) => (
+            <li>
+              <span>{index + 1}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p>{step.description}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="shell contact-grid">
+        <div class="contact-intro">
+          <p class="section-label">FREE ASSESSMENT</p>
+          <h2>Let’s plan the right CCTV setup.</h2>
+          <p>Tell us what you need to monitor and where the property is located. We’ll continue the conversation through your preferred contact method.</p>
+
+          <address class="contact-methods">
+            <a href="tel:+639621231176">
+              <span>Call or text</span>
+              <strong>0962 123 1176</strong>
+            </a>
+            <a href="mailto:ianmaestrecampo@gmail.com">
+              <span>Email</span>
+              <strong>ianmaestrecampo@gmail.com</strong>
+            </a>
+            <a href={facebookUrl} target="_blank" rel="noreferrer">
+              <span>Facebook</span>
+              <strong>Message BI-Vision Networks ↗</strong>
+            </a>
+            <div>
+              <span>Based in</span>
+              <strong>Hinoba-an, Negros Occidental</strong>
+            </div>
+          </address>
+        </div>
+
+        <form class="assessment-form" id="assessment-form" novalidate>
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" autocomplete="name" required />
+            <p class="field-error" id="name-error"></p>
+          </div>
+          <div class="form-field">
+            <label for="contact-detail">Phone number or email</label>
+            <input id="contact-detail" name="contact" autocomplete="tel" required />
+            <p class="field-error" id="contact-detail-error"></p>
+          </div>
+          <div class="form-field">
+            <label for="property">Property type</label>
+            <select id="property" name="property" required>
+              <option value="">Choose one</option>
+              <option>Home or residential property</option>
+              <option>Business or establishment</option>
+              <option>Existing CCTV system</option>
+              <option>Other</option>
+            </select>
+            <p class="field-error" id="property-error"></p>
+          </div>
+          <div class="form-field">
+            <label for="location">City or municipality</label>
+            <input id="location" name="location" autocomplete="address-level2" required />
+            <p class="field-error" id="location-error"></p>
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="message">What do you need help with?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <p class="field-error" id="message-error"></p>
+          </div>
+          <button class="button button-primary form-submit" type="submit">
+            Prepare email request
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </button>
+          <p class="form-note">This opens your email app with the request details filled in. You can review everything before sending.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <a class="brand brand-light" href="#top" aria-label="BI-Vision Networks home">
+          <img src="/images/bi-vision-logo-placeholder.png" alt="" width="512" height="512" loading="lazy" />
+          <span class="brand-copy"><strong>BI-VISION</strong><span>NETWORKS</span></span>
+        </a>
+        <p>See it. Secure it. Connect it.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#project">Recent work</a>
+        <a href="#process">How it works</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-contact">
+        <a href="tel:+639621231176">0962 123 1176</a>
+        <a href="mailto:ianmaestrecampo@gmail.com">ianmaestrecampo@gmail.com</a>
+        <span>Negros Occidental, Philippines</span>
+      </div>
+    </div>
+    <div class="shell footer-base">
+      <span>© {new Date().getFullYear()} BI-Vision Networks</span>
+      <a href={facebookUrl} target="_blank" rel="noreferrer">Facebook ↗</a>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:+639621231176">Call BI-Vision · 0962 123 1176</a>
+
+  <script>
+    const form = document.querySelector<HTMLFormElement>("#assessment-form");
+    const status = document.querySelector<HTMLElement>("#form-status");
+
+    const showError = (field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement, message: string) => {
+      const error = document.querySelector<HTMLElement>(`#${field.id}-error`);
+      field.setAttribute("aria-invalid", "true");
+      field.setAttribute("aria-describedby", `${field.id}-error`);
+      if (error) error.textContent = message;
+    };
+
+    const clearError = (field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement) => {
+      const error = document.querySelector<HTMLElement>(`#${field.id}-error`);
+      field.removeAttribute("aria-invalid");
+      field.removeAttribute("aria-describedby");
+      if (error) error.textContent = "";
+    };
+
+    form?.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>("input, textarea, select").forEach((field) => {
+      field.addEventListener("blur", () => {
+        if (!field.value.trim()) showError(field, "Please complete this field.");
+        else clearError(field);
+      });
+    });
+
+    form?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>("[required]"));
+      let firstInvalid: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | undefined;
+
+      fields.forEach((field) => {
+        if (!field.value.trim()) {
+          showError(field, "Please complete this field.");
+          firstInvalid ??= field;
+        } else {
+          clearError(field);
+        }
+      });
+
+      if (firstInvalid) {
+        firstInvalid.focus();
+        if (status) status.textContent = "Please complete the highlighted fields.";
+        return;
+      }
+
+      const data = new FormData(form);
+      const subject = encodeURIComponent(`Free CCTV assessment request from ${data.get("name")}`);
+      const body = encodeURIComponent([
+        `Name: ${data.get("name")}`,
+        `Contact: ${data.get("contact")}`,
+        `Property type: ${data.get("property")}`,
+        `Location: ${data.get("location")}`,
+        "",
+        "Request details:",
+        `${data.get("message")}`,
+      ].join("\n"));
+
+      if (status) status.textContent = "Opening your email app. Review the request, then press send.";
+      window.location.href = `mailto:ianmaestrecampo@gmail.com?subject=${subject}&body=${body}`;
+    });
+
+    document.querySelectorAll<HTMLAnchorElement>(".mobile-menu a").forEach((link) => {
+      link.addEventListener("click", () => link.closest("details")?.removeAttribute("open"));
+    });
+  </script>
+</BaseLayout>
