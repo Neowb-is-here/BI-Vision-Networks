@@ -8,6 +8,17 @@ interface Props {
 
 const { title, description } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "BI-Vision Networks",
+  foundingDate: "2025",
+  description,
+  telephone: "+639621231176",
+  email: "ianmaestrecampo@gmail.com",
+  areaServed: "Negros Occidental, Philippines",
+  sameAs: ["https://www.facebook.com/profile.php?id=61579289795204"],
+};
 ---
 
 <!doctype html>
@@ -21,6 +32,7 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefin
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="/images/bi-vision-logo-placeholder.png" />
+    <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} is:inline></script>
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
